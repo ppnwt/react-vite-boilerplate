@@ -1,9 +1,18 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import styled from 'styled-components';
 
 function App() {
   const [count, setCount] = useState(0)
+
+// Create a <Title> react component that renders an <h1> which is
+// centered, palevioletred and sized at 1.5em
+const Title = styled.h1`
+  font-size: 1.2em;
+  text-align: center;
+  color: palevioletred;
+`;
 
   return (
     <div className="App">
@@ -16,6 +25,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <Title>Hello World, this is my first styled component!</Title>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
